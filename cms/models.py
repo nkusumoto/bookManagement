@@ -24,4 +24,6 @@ class Impression(models.Model):
 class AdsenseUrl(models.Model):
     """購入できるURL"""
     book = models.ForignKey(Book, verbose_name='書籍', related_name='impressions', on_delete=models.CASCADE)
-    url = models.UrlField('URL', blank=True)
+    amazonUrl = models.UrlField('URL', blank=True)
+    yahooUrl = models.UrlField('URL', blank=True)
+    rakutenUrl = models.UrlField('URL', blank=True)
